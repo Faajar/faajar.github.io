@@ -1,0 +1,146 @@
+/* Halaman publik Konten Managemen: warna Studio gelap yang sama dengan app (docs/DESIGN.md). */
+:root {
+  color-scheme: dark;
+  --base: #161513;
+  --panel: #1f1d1a;
+  --line: #3a3732;
+  --ink: #ede8df;
+  --muted: #a39c90;
+  --signal: #e8b03a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 16px;
+}
+
+.skip:focus {
+  left: 16px;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 12px;
+  background: var(--panel);
+  border-radius: 6px;
+}
+
+.top,
+main,
+.bottom {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.top {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+main {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 32px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+code {
+  font-family: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0 4px;
+  overflow-wrap: anywhere;
+}
+
+ul {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+.english {
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.bottom {
+  padding-top: 8px;
+  padding-bottom: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.bottom a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
